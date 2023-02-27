@@ -1,4 +1,5 @@
-init: function(){
+imageViewer = {
+	init: function(){
 		$(function() {
 			$("#btn-change").click(this._changeImage.bind(this));
 			$("#btn-slideshow").click(this._slideShow.bind(this));
