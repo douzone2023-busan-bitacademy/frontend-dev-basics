@@ -18,7 +18,7 @@ var render = function(vo) {
 		"	<a href='' data-no=''>삭제</a>" + 
 		"</li>";
 	
-	$("#list-guestbook").prepend(htmls);
+		$("#list-guestbook")[mode? "prepend" : "append"](htmls);
 }
 
 $(function() {
@@ -46,7 +46,7 @@ $(function() {
 					return;
 				}
 				
-				render(response.data);
+				render(response.data, true);
 			}
 		});
 	});
